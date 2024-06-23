@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: srvconfigmap
+  labels:
+    app: srvconfigmap
+  namespace: default
+spec:
+  serviceAccountName: default
+  containers:
+    - name: srvconfigmap
+      image: srvconfigmap
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 80

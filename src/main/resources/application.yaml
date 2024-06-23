@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: srvconfigmap
+  config:
+    import: "kubernetes:"
+  cloud:
+    kubernetes:
+      config:
+        enabled: true
+        name: config-map-test
+        namespace: default
+        sources:
+          - namespace: default
+          - name: config-map-test
+      reload:
+        enabled: true
+        strategy: refresh
+        mode: event
+        monitoring-config-maps: true
+management:
+  endpoint:
+    refresh:
+      enabled: true
+    restart:
+      enabled: true
+    env:
+      show-values: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

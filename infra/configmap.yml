@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map-test
+  namespace: default
+  labels:
+    spring.cloud.kubernetes.config: "true"
+    spring.cloud.kubernetes.config.informer.enabled: "true"
+data:
+  myconfig.chave1: "Ola"
+  myconfig.chave2: "mundo"
