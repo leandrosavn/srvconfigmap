@@ -17,18 +17,6 @@ spring:
         strategy: refresh
         mode: event
         monitoring-config-maps: true
-management:
-  endpoint:
-    refresh:
-      enabled: true
-    restart:
-      enabled: true
-    env:
-      show-values: always
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 
 myconfig:
   varTest1: ${myconfig.chave1:vazia}
