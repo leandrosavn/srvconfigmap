@@ -7,5 +7,5 @@ metadata:
     spring.cloud.kubernetes.config: "true"
     spring.cloud.kubernetes.config.informer.enabled: "true"
 data:
-  myconfig.chave1: "Ola"
+  myconfig.chave1: "Iueee"
   myconfig.chave2: "mundo"
