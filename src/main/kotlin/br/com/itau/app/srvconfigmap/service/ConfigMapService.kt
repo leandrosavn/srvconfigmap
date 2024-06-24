@@ -14,16 +14,14 @@ import java.time.LocalDateTime
 @EnableScheduling
 @Configuration
 @ConfigurationProperties(prefix ="myconfig")
-class ConfigMapService
+class ConfigMapService{
 
- {
-
-     @Autowired lateinit var chave1: String
-     @Autowired lateinit var chave2: String
+     @Autowired lateinit var varTest1: String
+     @Autowired lateinit var varTest2: String
 
     @Scheduled(fixedDelay = 1000)
     fun listVars() {
-        println(LocalDateTime.now().toString() + " - "+ arrayListOf(chave1,chave2))
+        println(LocalDateTime.now().toString() + " - "+ arrayListOf(varTest1,varTest2))
     }
 
 

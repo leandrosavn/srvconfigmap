@@ -29,3 +29,7 @@ management:
     web:
       exposure:
         include: "*"
+
+myconfig:
+  varTest1: ${myconfig.chave1:vazia}
+  varTest2: ${myconfig.chave2:vazia}
